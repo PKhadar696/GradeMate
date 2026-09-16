@@ -1465,3 +1465,15 @@ button {
     display: block;
   }
 }
+/* Fix input text visibility */
+input,
+select,
+textarea {
+  color: #172033 !important;
+  background: #ffffff !important;
+}
+
+input::placeholder {
+  color: #777 !important;
+  opacity: 1 !important;
+}
