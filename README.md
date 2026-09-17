@@ -1,16 +1,99 @@
-# React + Vite
+# 🎓 GradeMate
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+### Student Academic Portal
 
-Currently, two official plugins are available:
+GradeMate is a free student academic web application designed to make academic calculations simple and easy.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+It helps students calculate and track:
 
-## React Compiler
+- 📊 SGPA
+- 📈 CGPA
+- 📉 Percentage
+- 📚 Semester-wise Results
+- 👤 Student Profile
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Demo
 
-## Expanding the Oxlint configuration
+https://grade-mate-sand.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## ✨ Features
+
+### 🔐 Authentication
+- Student Registration
+- Student Login
+- Secure authentication using Supabase
+- Student-specific data
+
+### 🧮 SGPA Calculator
+- Add multiple subjects
+- Enter subject credits
+- Select subject type
+- Select grades
+- Supports Regular, NPTEL and Non-Credit subjects
+- Automatic SGPA calculation
+- Save semester results
+- Edit saved results
+- Delete saved results
+
+### 📊 CGPA Calculator
+- Automatically calculates overall CGPA
+- Uses saved semester results
+- Displays total semesters
+- Displays total credits
+
+### 📈 Percentage Calculator
+- Converts CGPA into percentage
+- Displays the calculated percentage
+
+### 📋 My Results
+- View all saved semester results
+- View subject details
+- Edit semester results
+- Update semester results
+- Delete semester results
+
+### 👤 Student Profile
+- Registration ID
+- Full Name
+- Course
+- Branch
+- Pass-out Year
+- College
+- Profile data is saved securely
+
+### 📱 Responsive Design
+- Desktop support
+- Mobile support
+- Responsive dashboard
+- Mobile-friendly calculators and result pages
+
+## 🛠️ Technologies Used
+
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- Supabase
+- PostgreSQL
+- Git
+- GitHub
+- Vercel
+
+## 📁 Project Structure
+
+```text
+GradeMate/
+│
+├── public/
+│
+├── src/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── supabaseClient.js
+│   └── main.jsx
+│
+├── .gitignore
+├── index.html
+├── package.json
+└── README.md
