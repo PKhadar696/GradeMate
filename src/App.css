@@ -1477,3 +1477,708 @@ input::placeholder {
   color: #777 !important;
   opacity: 1 !important;
 }
+/* =========================
+   FINAL DESKTOP UI FIX
+   ========================= */
+
+/* Make all page headings clearly visible */
+.topbar h1,
+.dashboard-section h2,
+.section-title,
+.calculator-header h2,
+.profile-page h2,
+.results-list h2 {
+  color: #172033 !important;
+}
+
+/* Dashboard section headings */
+.dashboard-section h2 {
+  font-weight: 700;
+}
+
+/* My Results container */
+.results-list {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* My Results rows */
+.result-list-row {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  overflow: hidden;
+}
+
+/* Keep result information inside available space */
+.result-list-row > div:first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Buttons area */
+.result-list-row .result-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* All result buttons stay inside */
+.result-list-row button {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Delete button */
+.delete-result-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+/* =========================
+   SIDEBAR BRAND VISIBILITY
+   ========================= */
+
+.brand h1 {
+  color: #174ea6 !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+}
+
+.brand-subtitle {
+  color: #174ea6 !important;
+  font-weight: 600 !important;
+}
+/* =========================
+   MY RESULTS - FINAL DESKTOP FIX
+   ========================= */
+
+.results-list .result-list-row {
+  display: grid !important;
+  grid-template-columns: 1.5fr 0.8fr 0.8fr 1fr 90px 130px 70px !important;
+  align-items: center;
+  gap: 10px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 20px !important;
+  overflow: hidden !important;
+}
+
+.results-list .result-list-row > div:first-child {
+  min-width: 0 !important;
+  width: auto !important;
+}
+
+.results-list .result-list-row > span {
+  min-width: 0 !important;
+  white-space: nowrap !important;
+}
+
+.results-list .result-list-row button {
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 10px 8px !important;
+  white-space: nowrap !important;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .results-list .result-list-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .results-list .result-list-row > div:first-child,
+  .results-list .result-list-row > span,
+  .results-list .result-list-row button {
+    width: 100% !important;
+    min-width: 0 !important;
+    text-align: center !important;
+  }
+}
+/* =========================
+   MY RESULTS - FINAL LAYOUT FIX
+   ========================= */
+
+.results-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.result-list-row {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: minmax(150px, 1.5fr) 90px 90px auto auto auto;
+  align-items: center;
+  gap: 18px;
+
+  padding: 22px 28px;
+  background: #ffffff;
+  border: 1px solid #e1e6ef;
+  border-radius: 12px;
+}
+
+/* Semester + Regulation */
+.result-list-row > div:first-child {
+  min-width: 0;
+}
+
+.result-list-row > div:first-child strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #172033;
+  white-space: nowrap;
+}
+
+.result-list-row > div:first-child span {
+  display: block;
+  font-size: 14px;
+  color: #667085;
+}
+
+/* SGPA + Credits */
+.result-list-row > div:not(:first-child) {
+  text-align: center;
+  min-width: 70px;
+}
+
+.result-list-row small {
+  display: block;
+  font-size: 12px;
+  color: #667085;
+  margin-bottom: 5px;
+}
+
+.result-list-row > div strong {
+  display: block;
+  font-size: 17px;
+  color: #174ea6;
+}
+
+/* Buttons */
+.result-list-row button {
+  height: 42px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.edit-result-btn {
+  min-width: 72px;
+  padding: 10px 16px !important;
+}
+
+.delete-result-btn {
+  min-width: 100px;
+  padding: 10px 18px !important;
+}
+
+.result-list-row button[type="button"] {
+  min-width: 120px;
+}
+
+/* Details */
+.result-details {
+  grid-column: 1 / -1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   MEDIUM SCREEN
+   ========================= */
+
+@media (max-width: 1150px) {
+  .result-list-row {
+    grid-template-columns: minmax(140px, 1fr) 80px 80px;
+    gap: 14px;
+  }
+
+  .result-list-row .edit-result-btn,
+  .result-list-row button[type="button"],
+  .result-list-row .delete-result-btn {
+    width: auto;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+  .results-list {
+    gap: 14px;
+  }
+
+  .result-list-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 18px;
+    text-align: center;
+  }
+
+  .result-list-row > div:first-child {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .result-list-row > div:first-child strong {
+    white-space: normal;
+  }
+
+  .result-list-row > div:not(:first-child) {
+    text-align: center;
+  }
+
+  .result-list-row .edit-result-btn,
+  .result-list-row button[type="button"],
+  .result-list-row .delete-result-btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .result-list-row .edit-result-btn {
+    grid-column: 1;
+  }
+
+  .result-list-row button[type="button"] {
+    grid-column: 2;
+  }
+
+  .result-list-row .delete-result-btn {
+    grid-column: 1 / -1;
+  }
+
+  .result-details {
+    grid-column: 1 / -1;
+  }
+}
+/* View Details button fix */
+.result-list-row button[type="button"] {
+  min-width: 135px !important;
+  width: 135px !important;
+  padding: 10px 14px !important;
+  white-space: nowrap !important;
+}
+/* =========================================
+   MY RESULTS - FINAL SPACING FIX
+   ========================================= */
+
+.results-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.result-list-row {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns:
+    minmax(125px, 1fr)
+    65px
+    65px
+    72px
+    115px
+    85px;
+
+  align-items: center;
+  column-gap: 12px;
+
+  padding: 22px 28px;
+
+  background: #ffffff;
+  border: 1px solid #e1e6ef;
+  border-radius: 12px;
+}
+
+/* Semester */
+.result-list-row > div:first-child {
+  min-width: 0;
+}
+
+.result-list-row > div:first-child strong {
+  display: block;
+  font-size: 16px;
+  color: #172033;
+  white-space: nowrap;
+  margin-bottom: 6px;
+}
+
+.result-list-row > div:first-child span {
+  display: block;
+  font-size: 14px;
+  color: #667085;
+}
+
+/* SGPA + Credits */
+.result-list-row > div:not(:first-child) {
+  text-align: center;
+  min-width: 0;
+}
+
+.result-list-row small {
+  display: block;
+  font-size: 12px;
+  color: #667085;
+  margin-bottom: 5px;
+}
+
+.result-list-row > div strong {
+  display: block;
+  font-size: 17px;
+  color: #174ea6;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.result-list-row button {
+  height: 40px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.result-list-row .edit-result-btn {
+  width: 72px;
+  min-width: 72px;
+  padding: 9px 10px !important;
+}
+
+.result-list-row button[type="button"] {
+  width: 115px !important;
+  min-width: 115px !important;
+  padding: 9px 10px !important;
+}
+
+.result-list-row .delete-result-btn {
+  width: 85px;
+  min-width: 85px;
+  padding: 9px 10px !important;
+}
+
+/* Details section */
+.result-details {
+  grid-column: 1 / -1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MEDIUM SCREEN
+   ========================================= */
+
+@media (max-width: 1150px) {
+  .result-list-row {
+    grid-template-columns:
+      minmax(120px, 1fr)
+      60px
+      60px
+      70px
+      110px
+      80px;
+
+    column-gap: 8px;
+    padding: 20px 18px;
+  }
+
+  .result-list-row .edit-result-btn {
+    width: 70px;
+    min-width: 70px;
+  }
+
+  .result-list-row button[type="button"] {
+    width: 110px !important;
+    min-width: 110px !important;
+  }
+
+  .result-list-row .delete-result-btn {
+    width: 80px;
+    min-width: 80px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .result-list-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .result-list-row > div:first-child {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .result-list-row > div:not(:first-child) {
+    text-align: center;
+  }
+
+  .result-list-row .edit-result-btn {
+    grid-column: 1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .result-list-row button[type="button"] {
+    grid-column: 2;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .result-list-row .delete-result-btn {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .result-details {
+    grid-column: 1 / -1;
+  }
+}
+/* =========================================
+   GRADEMATE - MY RESULTS FINAL FIX
+   ========================================= */
+
+.results-list {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 18px !important;
+}
+
+.result-list-row {
+  width: 100% !important;
+  box-sizing: border-box !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 20px !important;
+
+  padding: 24px 28px !important;
+
+  background: #ffffff !important;
+  border: 1px solid #dfe5ee !important;
+  border-radius: 12px !important;
+
+  overflow: hidden !important;
+}
+
+/* Semester + Regulation */
+.result-list-row > div:first-child {
+  flex: 1 1 auto !important;
+  min-width: 145px !important;
+  text-align: left !important;
+}
+
+.result-list-row > div:first-child strong {
+  display: block !important;
+  font-size: 16px !important;
+  color: #172033 !important;
+  white-space: nowrap !important;
+  margin-bottom: 7px !important;
+}
+
+.result-list-row > div:first-child span {
+  display: block !important;
+  font-size: 14px !important;
+  color: #667085 !important;
+}
+
+/* SGPA */
+.result-list-row > div:nth-child(2) {
+  flex: 0 0 65px !important;
+  width: 65px !important;
+  text-align: center !important;
+}
+
+/* Credits */
+.result-list-row > div:nth-child(3) {
+  flex: 0 0 65px !important;
+  width: 65px !important;
+  text-align: center !important;
+}
+
+.result-list-row small {
+  display: block !important;
+  font-size: 12px !important;
+  color: #667085 !important;
+  margin-bottom: 6px !important;
+}
+
+.result-list-row > div strong {
+  display: block !important;
+  font-size: 17px !important;
+  color: #174ea6 !important;
+}
+
+/* =========================================
+   EDIT BUTTON
+   ========================================= */
+
+.result-list-row .edit-result-btn {
+  position: static !important;
+  transform: none !important;
+
+  flex: 0 0 78px !important;
+  width: 78px !important;
+  min-width: 78px !important;
+
+  height: 42px !important;
+
+  margin: 0 !important;
+  padding: 10px 12px !important;
+
+  box-sizing: border-box !important;
+
+  white-space: nowrap !important;
+}
+
+/* =========================================
+   VIEW DETAILS BUTTON
+   ========================================= */
+
+.result-list-row button[type="button"] {
+  position: static !important;
+  transform: none !important;
+
+  flex: 0 0 120px !important;
+  width: 120px !important;
+  min-width: 120px !important;
+
+  height: 42px !important;
+
+  margin: 0 !important;
+  padding: 10px 12px !important;
+
+  box-sizing: border-box !important;
+
+  white-space: nowrap !important;
+
+  overflow: visible !important;
+}
+
+/* =========================================
+   DELETE BUTTON
+   ========================================= */
+
+.result-list-row .delete-result-btn {
+  position: static !important;
+  transform: none !important;
+
+  flex: 0 0 90px !important;
+  width: 90px !important;
+  min-width: 90px !important;
+
+  height: 42px !important;
+
+  margin: 0 !important;
+  padding: 10px 12px !important;
+
+  box-sizing: border-box !important;
+
+  white-space: nowrap !important;
+}
+
+
+/* =========================================
+   VIEW DETAILS CONTENT
+   ========================================= */
+
+.result-details {
+  width: 100% !important;
+  flex: 0 0 100% !important;
+  box-sizing: border-box !important;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .result-list-row {
+    display: grid !important;
+
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 12px !important;
+
+    padding: 18px !important;
+
+    overflow: visible !important;
+  }
+
+  .result-list-row > div:first-child {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .result-list-row > div:nth-child(2),
+  .result-list-row > div:nth-child(3) {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .result-list-row .edit-result-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-column: 1 !important;
+  }
+
+  .result-list-row button[type="button"] {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-column: 2 !important;
+  }
+
+  .result-list-row .delete-result-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-column: 1 / -1 !important;
+  }
+
+  .result-details {
+    grid-column: 1 / -1 !important;
+  }
+}
+/* FINAL: View Details + Delete spacing */
+.result-list-row .delete-result-btn {
+  margin-left: 14px !important;
+  width: 90px !important;
+  min-width: 90px !important;
+}
+
+.result-list-row button[type="button"] {
+  width: 120px !important;
+  min-width: 120px !important;
+  margin-right: 0 !important;
+}

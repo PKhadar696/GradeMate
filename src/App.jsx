@@ -1577,56 +1577,39 @@ function App() {
                     </strong>
                   </div>
 
-                  <div>
-                    <small>Credit Points</small>
+                  <div className="result-actions">
+                    <button
+                      type="button"
+                      className="edit-result-btn"
+                      onClick={() =>
+                        editSemesterResult(result)
+                      }
+                    >
+                      ✏️ Edit
+                    </button>
 
-                    <strong>
-                      {result.total_credit_points}
-                    </strong>
+                    <button
+                      type="button"
+                      className="view-result-btn"
+                      onClick={() =>
+                        toggleResultDetails(result.id)
+                      }
+                    >
+                      {viewingResultId === result.id
+                        ? "Hide Details"
+                        : "View Details"}
+                    </button>
+
+                    <button
+                      type="button"
+                      className="delete-result-btn"
+                      onClick={() =>
+                        deleteSemesterResult(result.id)
+                      }
+                    >
+                      Delete
+                    </button>
                   </div>
-
-                  <button
-                    className="edit-result-btn"
-                    onClick={() =>
-                      editSemesterResult(result)
-                    }
-                  >
-                    ✏️ Edit
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() =>
-                      toggleResultDetails(result.id)
-                    }
-                    style={{
-                      background:
-                        viewingResultId === result.id
-                          ? "#e8f0ff"
-                          : "#f4f7ff",
-                      color: "#174ea6",
-                      border: "1px solid #cddcff",
-                      borderRadius: "8px",
-                      padding: "11px 18px",
-                      fontSize: "14px",
-                      fontWeight: "600",
-                      cursor: "pointer",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    {viewingResultId === result.id
-                      ? "▲ Hide Details"
-                      : "👁️ View Details"}
-                  </button>
-
-                  <button
-                    className="delete-result-btn"
-                    onClick={() =>
-                      deleteSemesterResult(result.id)
-                    }
-                  >
-                    Delete
-                  </button>
                 </div>
 
                 {viewingResultId === result.id &&
